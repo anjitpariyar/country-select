@@ -1,0 +1,35 @@
+						<input id="phone" name="phone" type="tel" class="form-control">
+
+$(document).ready(function(){
+  $('.iti__arrow').html(`<svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M4.49719 5C4.72226 5 4.93607 4.91111 5.09362 4.75556L8.83542 0.961111C9.05486 0.744444 9.05486 0.388889 8.83542 0.166667C8.61597 -0.05 8.26149 -0.05 8.04204 0.166667L4.49719 3.76111L0.957956 0.166667C0.738512 -0.0555556 0.384026 -0.0555556 0.164583 0.166667C-0.0548609 0.388889 -0.0548609 0.738889 0.164583 0.961111L3.90638 4.75556C4.0583 4.91111 4.27212 5 4.49719 5Z" fill="#4C4D4F"/>
+				</svg>
+				`);
+});
+// country code
+		window.addEventListener('DOMContentLoaded', (event) => {
+			var input = document.querySelector("#phone");
+			window.intlTelInput(input, {
+      	// allowDropdown: false,
+      	autoHideDialCode: false,
+      	autoPlaceholder: "off",
+      	// dropdownContainer: document.body,
+      	// excludeCountries: ["us"],
+      	// formatOnDisplay: false,
+      	// geoIpLookup: function(callback) {
+      	//   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+      	//     var countryCode = (resp && resp.country) ? resp.country : "";
+      	//     callback(countryCode);
+      	//   });
+      	// },
+      	hiddenInput: "full_number",
+      	// initialCountry: "auto",
+      	// localizedCountries: { 'de': 'Deutschland' },
+      	// nationalMode: false,
+      	// onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+      	placeholderNumberType: "MOBILE",
+      	preferredCountries: ['np', 'in'],
+      	separateDialCode: true,
+      	utilsScript: "./node_modules/country/build/js/utils.js",
+      });
+		});
